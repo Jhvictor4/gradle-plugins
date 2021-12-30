@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
     id("java-gradle-plugin")
     id("maven-publish")
-    id("com.gradle.plugin-publish") version "0.14.0"
+    id("com.gradle.plugin-publish") version "0.16.0"
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -32,13 +32,19 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
 }
 
-group= "com.github.jhvictor4"
+group= "io.github.jhvictor4"
 version= "1.0.0"
+
+pluginBundle {
+    website = "https://github.com/Jhvictor4/gradle-plugins"
+    vcsUrl = "https://github.com/Jhvictor4/gradle-plugins"
+    tags = listOf("docker", "easy build")
+}
 
 gradlePlugin {
     plugins {
         create("dockerPlugin") {
-            id = "com.github.jhvictor4.docker"
+            id = "io.github.jhvictor4.docker"
             displayName = "docker"
             description = "basic docker build & publishing plugin"
             implementationClass = "com.github.jhvictor4.plugin.DockerPlugIn"

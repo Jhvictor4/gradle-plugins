@@ -1,5 +1,5 @@
 plugins {
-    id("com.github.jhvictor4.docker")
+    id("io.github.jhvictor4.docker")
     id("org.springframework.boot") version "2.6.0" apply false
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.6.0"
